@@ -11,6 +11,13 @@ class PostimagesController < ApplicationController
     @postimage.save
     redirect_to postimages_path
   end
+  
+  def destroy
+    @postimage=Postimage.find(params[:id])
+    @postimage.destroy
+    redirect_to "/postimages"
+  end
+
 
 
 
@@ -19,6 +26,7 @@ class PostimagesController < ApplicationController
   end
 
   def show
+    @postimage=Postimage.find(params[:id])
   end
 
 
