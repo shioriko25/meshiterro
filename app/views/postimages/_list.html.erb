@@ -1,5 +1,5 @@
 
- <% postimages.each do |postimage| %> 
+<% postimages.each do |postimage| %>
 
 <div>
     <%= link_to postimage_path(postimage.id) do %>
@@ -15,3 +15,8 @@
 </div>
 
 <% end %> 
+
+
+
+<%= paginate postimages %>
+
